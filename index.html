@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wordle PPY</title>
+        <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div style="text-align: center;">
+    <div id="cuerpo">
+      <div style="text-align: center;">
+        <h1>Wordle PPY</h1>
+      </div>
+      <input type="text" id="guess-input" minlength="5" maxlength="5" pattern="[a-zA-Z]{5}" required>
+      <button id="guess-button">Intentar</button>
+      <div id="grid"></div>
+      <p id="guesses">
+      <div style="align-items: center;">
+        <div id="alerta"></div>
+        <div class="table-container">
+        <div style="text-align: center;">
+          <div id="pista" ></div>
+        </div>
+        </div>
+        <div id="aciertos"></div>
+        <div id="teclado"></div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

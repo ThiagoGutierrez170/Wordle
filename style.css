@@ -1,0 +1,85 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('wallhaven-d66o7g.jpg'); /* Reemplaza con la ruta de tu imagen */
+}
+#cuerpo{
+  background-color: #8080807c;
+  display: inline-block;
+  padding-left: 30%;
+  padding-right: 30%;
+  border-radius: 15px;
+}
+     
+  h1 {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px;
+    color: #a8e7e7;
+    background-color: #378037;
+    border-radius: 15px;
+    
+  }
+     
+  #guess-input {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px;
+    font-size: 18px;
+    width: 250px;
+    border: 1px solid #ccc;
+  }
+     
+  #guess-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #0CBABA;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+  }
+     
+  button:active {
+      transform: scale(0.95);
+  }
+     
+  .letter {
+      border: 1px solid black;
+      padding: 3px;
+      margin: 3px;
+      min-width: 20px;
+      text-align: center;
+      display: inline-block
+  }
+     
+  .row{
+      margin-bottom: 10px;
+  }
+     
+  .input-area{
+      margin: 30px;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 15px auto;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: cadetblue;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+}
+
