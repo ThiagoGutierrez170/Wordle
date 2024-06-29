@@ -1,3 +1,4 @@
+let palabra ="";
 const palabras = [
     "PLUMA", "JABON", "TIGRE", "LIMON", "FILAS", "CIELO", "MANGO", "MUNDO",
     "RELOJ", "MESAS", "VIDRO", "CIELO", "CAUSA", "MUSLO", "GIRAS", "DARDO",
@@ -11,10 +12,33 @@ const palabras = [
     "GATOS", "ARENA", "PLATA", "NARAN", "TIPOS", "RIMAS", "VIRUS", "FILAS",
     "MUEST", "GUANT", "GORRO", "MANGO", "RISAS", "TOMAS", "PECHO", "LUCHA",
     "SONDA", "CLASE", "RADIO", "TEJAS", "ENEMA", "MOTIN", "VIDRO", "ALIAR"
-  ];
-const indiceAleatorio = Math.floor(Math.random() * palabras.length);
+  ];/*
+  fetch('https://random-word.ryanrk.com/api/en/word/random/?Length=5')
+  .then(response => response.json())
+  .then(response => {
+      console.log(response[0].toUpperCase(),"api");
+      palabra = response[0].toUpperCase();
+  })
+
+const indiceAleatorio = Math.floor(Math.random() * palabras.length);*/
+fetch('https://random-word.ryanrk.com/api/en/word/random/?Length=5')
+  .then(response => response.json())
+  .then(response => {
+    if (response[0] && response[0].trim() !== '') {
+      palabra = response[0].toUpperCase();
+      console.log('Palabra obtenida de la API:', palabra);
+    } else {
+      throw new Error('La palabra obtenida es nula o vacía');
+    }
+  })
+  .catch(err => {
+    console.error('Error al obtener la palabra aleatoria:', err);
+    const indiceAleatorio = Math.floor(Math.random() * palabras.length);
+    palabra = palabras[indiceAleatorio];
+    console.log('Palabra obtenida de la lista local:', palabra);
+  });
 let intentos = 6;
-let palabra = palabras[indiceAleatorio];
+//let palabra = palabras[indiceAleatorio];
 let i=0;
 
 function crearVector(texto){
